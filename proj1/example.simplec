@@ -1,0 +1,15 @@
+int x;
+
+f(a, b) : function(pointer<int>, char) -> char { return *a + (int)b; }
+
+main {
+  int x;
+  pointer<int> y;
+  char c;
+  y = &x;
+  c = 't';
+  return "jlkfds";
+  /* return 10; */
+  /* return '0'; */
+  /* return 999999999; */
+}

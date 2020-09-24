@@ -1,0 +1,11 @@
+main {
+  int garbage;
+  if (0) {
+    garbage = printf("shouldn't print");
+
+  } else {
+    garbage = printf("should print");
+  }
+
+  return 0;
+}

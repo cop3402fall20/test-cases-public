@@ -1,0 +1,12 @@
+
+int i;
+
+main {
+  int x;
+  x = 10;
+  if (x < 100) {
+    i = printf("10 is less than 100");
+  }
+
+  return 0;
+}

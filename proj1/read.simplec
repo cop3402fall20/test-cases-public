@@ -1,0 +1,6 @@
+main {
+  int garbage;
+  int x;
+  garbage = printf("%d", &x);
+  return 0;
+}

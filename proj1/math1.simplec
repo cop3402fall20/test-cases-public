@@ -1,0 +1,7 @@
+main {
+  int garbage;
+  int x;
+  x = (7) * 2 - (9 - 5) * -5;
+  garbage = printf("%d", x);
+  return 0;
+}

@@ -1,0 +1,9 @@
+main {
+  int garbage;
+  int x;
+  int y;
+  x = 1;
+  y = -x;
+  garbage = printf("%d", y);
+  return 0;
+}
