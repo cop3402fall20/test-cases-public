@@ -1,0 +1,50 @@
++-prog
+|  +-decllist(empty)
+|  +-funclist(empty)
+|  +-main
+|  |  +-decllist
+|  |  |  +-decl
+|  |  |  |  +-primitivetype
+|  |  |  |  |  +-typename_int
+|  |  |  |  +-garbage
+|  |  |  +-decllist
+|  |  |  |  +-decl
+|  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  +-typename_int
+|  |  |  |  |  +-x
+|  |  |  |  +-decllist
+|  |  |  |  |  +-decl
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  +-y
+|  |  |  |  |  +-decllist(empty)
+|  |  +-stmtlist
+|  |  |  +-assignstmt
+|  |  |  |  +-identexpr
+|  |  |  |  |  +-x
+|  |  |  |  +-intexpr
+|  |  |  |  |  +-1
+|  |  |  +-stmtlist
+|  |  |  |  +-assignstmt
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-y
+|  |  |  |  |  +-unaryexpr
+|  |  |  |  |  |  +-op_minus
+|  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  +-x
+|  |  |  |  +-stmtlist
+|  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  +-garbage
+|  |  |  |  |  |  +-callexpr
+|  |  |  |  |  |  |  +-printf
+|  |  |  |  |  |  |  +-exprlist
+|  |  |  |  |  |  |  |  +-strexpr
+|  |  |  |  |  |  |  |  |  +-"%d"
+|  |  |  |  |  |  |  |  +-exprlist
+|  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  +-y
+|  |  |  |  |  |  |  |  |  +-exprlist(empty)
+|  |  |  |  |  +-stmtlist(empty)
+|  |  +-intexpr
+|  |  |  +-0

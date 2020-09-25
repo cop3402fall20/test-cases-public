@@ -1,0 +1,57 @@
++-prog
+|  +-decllist(empty)
+|  +-funclist
+|  |  +-func
+|  |  |  +-f
+|  |  |  +-paramlist(empty)
+|  |  |  +-functiontype
+|  |  |  |  +-typelist(empty)
+|  |  |  |  +-primitivetype
+|  |  |  |  |  +-typename_int
+|  |  |  +-decllist(empty)
+|  |  |  +-stmtlist(empty)
+|  |  |  +-intexpr
+|  |  |  |  +-20
+|  |  +-funclist
+|  |  |  +-func
+|  |  |  |  +-g
+|  |  |  |  +-paramlist
+|  |  |  |  |  +-x
+|  |  |  |  |  +-paramlist(empty)
+|  |  |  |  +-functiontype
+|  |  |  |  |  +-typelist
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  +-typelist(empty)
+|  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  +-typename_int
+|  |  |  |  +-decllist
+|  |  |  |  |  +-decl
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  +-y
+|  |  |  |  |  +-decllist(empty)
+|  |  |  |  +-stmtlist
+|  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  +-y
+|  |  |  |  |  |  +-callexpr
+|  |  |  |  |  |  |  +-f
+|  |  |  |  |  |  |  +-exprlist(empty)
+|  |  |  |  |  +-stmtlist(empty)
+|  |  |  |  +-binaryexpr
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-x
+|  |  |  |  |  +-op_minus
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-y
+|  |  |  +-funclist(empty)
+|  +-main
+|  |  +-decllist(empty)
+|  |  +-stmtlist(empty)
+|  |  +-callexpr
+|  |  |  +-g
+|  |  |  +-exprlist
+|  |  |  |  +-intexpr
+|  |  |  |  |  +-10
+|  |  |  |  +-exprlist(empty)

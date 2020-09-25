@@ -1,0 +1,75 @@
++-prog
+|  +-decllist
+|  |  +-decl
+|  |  |  +-primitivetype
+|  |  |  |  +-typename_int
+|  |  |  +-x
+|  |  +-decllist(empty)
+|  +-funclist
+|  |  +-func
+|  |  |  +-f
+|  |  |  +-paramlist
+|  |  |  |  +-a
+|  |  |  |  +-paramlist
+|  |  |  |  |  +-b
+|  |  |  |  |  +-paramlist(empty)
+|  |  |  +-functiontype
+|  |  |  |  +-typelist
+|  |  |  |  |  +-pointertype
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  +-typelist
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_char
+|  |  |  |  |  |  +-typelist(empty)
+|  |  |  |  +-primitivetype
+|  |  |  |  |  +-typename_char
+|  |  |  +-decllist(empty)
+|  |  |  +-stmtlist(empty)
+|  |  |  +-binaryexpr
+|  |  |  |  +-unaryexpr
+|  |  |  |  |  +-op_deref
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-a
+|  |  |  |  +-op_plus
+|  |  |  |  +-castexpr
+|  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  +-typename_int
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-b
+|  |  +-funclist(empty)
+|  +-main
+|  |  +-decllist
+|  |  |  +-decl
+|  |  |  |  +-primitivetype
+|  |  |  |  |  +-typename_int
+|  |  |  |  +-x
+|  |  |  +-decllist
+|  |  |  |  +-decl
+|  |  |  |  |  +-pointertype
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  +-y
+|  |  |  |  +-decllist
+|  |  |  |  |  +-decl
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_char
+|  |  |  |  |  |  +-c
+|  |  |  |  |  +-decllist(empty)
+|  |  +-stmtlist
+|  |  |  +-assignstmt
+|  |  |  |  +-identexpr
+|  |  |  |  |  +-y
+|  |  |  |  +-unaryexpr
+|  |  |  |  |  +-op_ref
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-x
+|  |  |  +-stmtlist
+|  |  |  |  +-assignstmt
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-c
+|  |  |  |  |  +-charexpr
+|  |  |  |  |  |  +-116
+|  |  |  |  +-stmtlist(empty)
+|  |  +-strexpr
+|  |  |  +-"jlkfds"

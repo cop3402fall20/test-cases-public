@@ -1,0 +1,8 @@
++-prog
+|  +-decllist(empty)
+|  +-funclist(empty)
+|  +-main
+|  |  +-decllist(empty)
+|  |  +-stmtlist(empty)
+|  |  +-intexpr
+|  |  |  +-0

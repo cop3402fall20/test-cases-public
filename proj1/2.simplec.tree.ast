@@ -1,0 +1,192 @@
++-prog
+|  +-decllist(empty)
+|  +-funclist
+|  |  +-func
+|  |  |  +-countContiguousXs
+|  |  |  +-paramlist
+|  |  |  |  +-board
+|  |  |  |  +-paramlist
+|  |  |  |  |  +-length
+|  |  |  |  |  +-paramlist
+|  |  |  |  |  |  +-height
+|  |  |  |  |  |  +-paramlist(empty)
+|  |  |  +-functiontype
+|  |  |  |  +-typelist
+|  |  |  |  |  +-pointertype
+|  |  |  |  |  |  +-pointertype
+|  |  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  |  +-typename_char
+|  |  |  |  |  +-typelist
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  +-typelist
+|  |  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  |  +-typelist(empty)
+|  |  |  |  +-primitivetype
+|  |  |  |  |  +-typename_int
+|  |  |  +-decllist
+|  |  |  |  +-decl
+|  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  +-typename_int
+|  |  |  |  |  +-count
+|  |  |  |  +-decllist
+|  |  |  |  |  +-decl
+|  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  +-i
+|  |  |  |  |  +-decllist
+|  |  |  |  |  |  +-decl
+|  |  |  |  |  |  |  +-primitivetype
+|  |  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  |  +-j
+|  |  |  |  |  |  +-decllist(empty)
+|  |  |  +-stmtlist
+|  |  |  |  +-assignstmt
+|  |  |  |  |  +-identexpr
+|  |  |  |  |  |  +-i
+|  |  |  |  |  +-intexpr
+|  |  |  |  |  |  +-0
+|  |  |  |  +-stmtlist
+|  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  +-count
+|  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  +-0
+|  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  +-whilestmt
+|  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  +-i
+|  |  |  |  |  |  |  |  +-op_lt
+|  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  +-length
+|  |  |  |  |  |  |  +-compoundstmt
+|  |  |  |  |  |  |  |  +-decllist(empty)
+|  |  |  |  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  +-j
+|  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  +-0
+|  |  |  |  |  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  |  |  |  |  +-whilestmt
+|  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  +-j
+|  |  |  |  |  |  |  |  |  |  |  |  +-op_lt
+|  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  +-height
+|  |  |  |  |  |  |  |  |  |  |  +-compoundstmt
+|  |  |  |  |  |  |  |  |  |  |  |  +-decllist(empty)
+|  |  |  |  |  |  |  |  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  |  |  |  |  |  |  |  +-ifstmt
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-arrayexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-arrayexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-board
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-i
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-j
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_eq
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-charexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-88
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  +-compoundstmt
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-decllist(empty)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-count
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-count
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_plus
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  |  |  |  |  |  |  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  +-ifstmt
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-i
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_minus
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_ge
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_and
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-arrayexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-arrayexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-board
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-i
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_minus
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-j
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_eq
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-charexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-88
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_or
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-j
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_minus
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_ge
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_and
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-arrayexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-arrayexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-board
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-i
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-j
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_minus
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_eq
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-charexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-88
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-compoundstmt
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-decllist(empty)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-count
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-count
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-op_minus
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  |  |  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  +-identexpr
+|  |  |  |  +-count
+|  |  +-funclist(empty)
+|  +-main
+|  |  +-decllist(empty)
+|  |  +-stmtlist(empty)
+|  |  +-intexpr
+|  |  |  +-0

@@ -1,0 +1,43 @@
++-prog
+|  +-decllist(empty)
+|  +-funclist(empty)
+|  +-main
+|  |  +-decllist
+|  |  |  +-decl
+|  |  |  |  +-primitivetype
+|  |  |  |  |  +-typename_int
+|  |  |  |  +-garbage
+|  |  |  +-decllist(empty)
+|  |  +-stmtlist
+|  |  |  +-ifelsestmt
+|  |  |  |  +-intexpr
+|  |  |  |  |  +-0
+|  |  |  |  +-compoundstmt
+|  |  |  |  |  +-decllist(empty)
+|  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  +-garbage
+|  |  |  |  |  |  |  +-callexpr
+|  |  |  |  |  |  |  |  +-printf
+|  |  |  |  |  |  |  |  +-exprlist
+|  |  |  |  |  |  |  |  |  +-strexpr
+|  |  |  |  |  |  |  |  |  |  +-"shouldn't print"
+|  |  |  |  |  |  |  |  |  +-exprlist(empty)
+|  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  |  +-compoundstmt
+|  |  |  |  |  +-decllist(empty)
+|  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  +-garbage
+|  |  |  |  |  |  |  +-callexpr
+|  |  |  |  |  |  |  |  +-printf
+|  |  |  |  |  |  |  |  +-exprlist
+|  |  |  |  |  |  |  |  |  +-strexpr
+|  |  |  |  |  |  |  |  |  |  +-"should print"
+|  |  |  |  |  |  |  |  |  +-exprlist(empty)
+|  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  +-stmtlist(empty)
+|  |  +-intexpr
+|  |  |  +-0

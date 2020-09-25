@@ -1,0 +1,45 @@
++-prog
+|  +-decllist
+|  |  +-decl
+|  |  |  +-primitivetype
+|  |  |  |  +-typename_int
+|  |  |  +-i
+|  |  +-decllist(empty)
+|  +-funclist(empty)
+|  +-main
+|  |  +-decllist
+|  |  |  +-decl
+|  |  |  |  +-primitivetype
+|  |  |  |  |  +-typename_int
+|  |  |  |  +-x
+|  |  |  +-decllist(empty)
+|  |  +-stmtlist
+|  |  |  +-assignstmt
+|  |  |  |  +-identexpr
+|  |  |  |  |  +-x
+|  |  |  |  +-intexpr
+|  |  |  |  |  +-10
+|  |  |  +-stmtlist
+|  |  |  |  +-ifstmt
+|  |  |  |  |  +-binaryexpr
+|  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  +-x
+|  |  |  |  |  |  +-op_lt
+|  |  |  |  |  |  +-intexpr
+|  |  |  |  |  |  |  +-100
+|  |  |  |  |  +-compoundstmt
+|  |  |  |  |  |  +-decllist(empty)
+|  |  |  |  |  |  +-stmtlist
+|  |  |  |  |  |  |  +-assignstmt
+|  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  +-i
+|  |  |  |  |  |  |  |  +-callexpr
+|  |  |  |  |  |  |  |  |  +-printf
+|  |  |  |  |  |  |  |  |  +-exprlist
+|  |  |  |  |  |  |  |  |  |  +-strexpr
+|  |  |  |  |  |  |  |  |  |  |  +-"10 is less than 100"
+|  |  |  |  |  |  |  |  |  |  +-exprlist(empty)
+|  |  |  |  |  |  |  +-stmtlist(empty)
+|  |  |  |  +-stmtlist(empty)
+|  |  +-intexpr
+|  |  |  +-0
