@@ -1,22 +1,22 @@
-f() : function() -> int { 
+f(x) : function(int) -> int { 
 	int tmp;
 	tmp = 1;
 	return tmp;
 	}
 
-g() : function() -> int { 
+g(x) : function(int) -> int { 
 	int tmp;
 	tmp = 2;
 	return tmp;
 	}
 
-h() : function() -> int { 
+h(x) : function(int) -> int { 
 	int tmp;
 	tmp = 3;
 	return tmp;
 	}
 
-i() : function() -> int { 
+i(x) : function(int) -> int { 
 	int tmp;
 	tmp = 4;
 	return tmp;
@@ -24,18 +24,18 @@ i() : function() -> int {
 
 main {
 
-
+	int res;
 	int a;
 	int b;
 	int c;
 	int d;
 	int e;
 
-	a = f();
-	b = g();
-	c = h();
-	d = h();
-	e = i();
+	res = f(a);
+	res = g(b);
+	res = h(c);
+	res = h(d);
+	res = i(e);
 	
 
 	return 0;
