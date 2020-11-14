@@ -1,12 +1,3 @@
-function(pointer<char>, char) -> int printf;
-
-print(ch) : function(char) -> int {
-  int res;
-  res = printf("%c", ch);
-
-  return 0;
-}
-
 f() : function() -> int { 
   int yo;
   yo = 20;
@@ -22,7 +13,6 @@ main {
   int x;
   int a;
   int e;
-  char d;
  
   array<10,int> arr;
   x = f();
@@ -33,10 +23,6 @@ main {
     x = x - 1;
   }
 
-  d = 'k';
-  e = print(d);
-
-
-  return arr[0];
+  return 0;
 
 }
