@@ -1,4 +1,4 @@
-f() : function() -> int { 
+f(w) : function(int) -> int { 
   int yo;
   yo = 20;
   return yo; 
@@ -13,9 +13,9 @@ main {
   int x;
   int a;
   int e;
- 
+  e = 3;
   array<10,int> arr;
-  x = f();
+  x = f(e);
 
   while(x > 0){
 
