@@ -1,0 +1,42 @@
+f() : function() -> char { 
+	char tmp;
+	tmp = 'h';
+	return tmp;
+	}
+
+g() : function() -> char { 
+	char tmp;
+	tmp = 'e';
+	return tmp;
+	}
+
+h() : function() -> char { 
+	char tmp;
+	tmp = 'l';
+	return tmp;
+	}
+
+i() : function() -> char { 
+	char tmp;
+	tmp = 'o';
+	return tmp;
+	}
+
+main {
+
+
+	char a;
+	char b;
+	char c;
+	char d;
+	char e;
+
+	a = f();
+	b = g();
+	c = h();
+	d = h();
+	e = i();
+	
+
+	return 0;
+}

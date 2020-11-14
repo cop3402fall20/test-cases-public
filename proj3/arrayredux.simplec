@@ -1,0 +1,28 @@
+function(pointer<char>, char) -> int printf;
+
+print(ch) : function(char) -> int {
+  int x;
+  int tmp;
+  x = 1;
+  if (x) {
+  	tmp = printf("%c", ch);
+  }
+  return 0;
+}
+
+f() : function() -> int { return 10; }
+
+main {
+
+  int x;
+  int var;
+  array<10,char> arr;
+  x = f();
+
+  while(x > 0){
+    var = print(arr[x]);
+  }
+
+  return 0;
+
+}

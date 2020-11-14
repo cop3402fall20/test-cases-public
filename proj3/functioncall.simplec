@@ -1,0 +1,19 @@
+fi() : function() -> int { return 20; }
+
+do() : function() -> int { 
+	int res;
+	res = fi();
+	return res;
+}
+
+go(x) : function(int) -> int {
+  int y;
+  y = do();
+  return x - y;
+}
+
+main {
+	int x;
+	x = go(10);
+	return 0; 
+}
