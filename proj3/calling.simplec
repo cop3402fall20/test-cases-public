@@ -13,13 +13,14 @@ main {
   int x;
   int a;
   int e;
+  int d;
   e = 3;
-  array<10,int> arr;
   x = f(e);
+  a = 2;
 
   while(x > 0){
 
-    arr[x - 1] = 2 * g(a);
+    d = 2 * g(a);
     x = x - 1;
   }
 
