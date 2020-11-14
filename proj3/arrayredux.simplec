@@ -1,27 +1,18 @@
-function(pointer<char>, char) -> int printf;
-
-print(ch) : function(char) -> int {
-  int x;
-  int tmp;
-  x = 1;
-  if (x) {
-  	tmp = printf("%c", ch);
-  }
-  return 0;
-}
-
 f() : function() -> int { return 10; }
 
 main {
 
   int x;
   int var;
-  array<10,char> arr;
+  array<10,int> arr;
   x = f();
 
   while(x > 0){
-    var = print(arr[x]);
+
+    arr[x - 1] = 2 * x;
+    x = x - 1;
   }
+
 
   return 0;
 
