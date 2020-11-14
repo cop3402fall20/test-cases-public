@@ -1,28 +1,5 @@
 	.file "stdin"
 	.text
-	.globl print
-	.type print, @function
-print:
-	push	%rbp
-	movq	%rsp, %rbp
-	push	%rbx
-	# save any caller-saved registers
-	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
-	# call the function
-	call	printf
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
-	pop	%rax
-	pop	%rbx
-	movq	%rbp, %rsp
-	pop	%rbp
-	ret
-	.text
 	.globl f
 	.type f, @function
 f:
@@ -59,18 +36,6 @@ main:
 	# pass parameters either in registers or in stack
 	# call the function
 	call	f
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
-	pop	%rax
-	# save any caller-saved registers
-	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
-	# call the function
-	call	print
 	# restore the stack afterwards
 	# restore any caller-saved registers
 	pop	%rdx
