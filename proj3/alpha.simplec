@@ -1,35 +1,35 @@
-f() : function() -> char { 
-	char tmp;
-	tmp = 'h';
+f() : function() -> int { 
+	int tmp;
+	tmp = 1;
 	return tmp;
 	}
 
-g() : function() -> char { 
-	char tmp;
-	tmp = 'e';
+g() : function() -> int { 
+	int tmp;
+	tmp = 2;
 	return tmp;
 	}
 
-h() : function() -> char { 
-	char tmp;
-	tmp = 'l';
+h() : function() -> int { 
+	int tmp;
+	tmp = 3;
 	return tmp;
 	}
 
-i() : function() -> char { 
-	char tmp;
-	tmp = 'o';
+i() : function() -> int { 
+	int tmp;
+	tmp = 4;
 	return tmp;
 	}
 
 main {
 
 
-	char a;
-	char b;
-	char c;
-	char d;
-	char e;
+	int a;
+	int b;
+	int c;
+	int d;
+	int e;
 
 	a = f();
 	b = g();
