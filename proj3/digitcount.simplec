@@ -16,7 +16,6 @@ digitcount(x) : function(int) -> int {
 
 main {
   int a;
-  int garbage;
   a = digitcount(12345678);
   return 0;
 }
