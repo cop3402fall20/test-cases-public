@@ -1,24 +1,54 @@
-	.file "stdin"
-	.text
-	.globl factorial
-	.type factorial, @function
+.file "stdin"
+.text
+.globl factorial
+.type factorial, @function
 factorial:
+	# emit the function prologue
 	push	%rbp
-	movq	%rsp, %rbp
+	mov	%rsp, %rbp
+	sub	$16, %rsp
 	push	%rbx
+	# move parameter onto the stack
+	mov	%rdi, -8(%rbp)
+	# generate code for the body
+	# generate code for the return expression
+	mov	-16(%rbp), %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit the epilogue
 	pop	%rbx
-	movq	%rbp, %rsp
+	mov	%rbp, %rsp
 	pop	%rbp
 	ret
-	.text
-	.globl main
-	.type main, @function
+.text
+.globl main
+.type main, @function
 main:
+	# stack space for argc and argv
+	# emit main's prologue
 	push	%rbp
-	movq	%rsp, %rbp
-	subq	$128, %rsp
+	mov	%rsp, %rbp
+	sub	$32, %rsp
 	push	%rbx
+	# move argc and argv from parameter registers to the stack
+	mov	%rdi, -24(%rbp)
+	mov	%rsi, -32(%rbp)
+	# generate code for the body
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$4, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# generate code for the return expression
+	# push the integer
+	mov	$7, %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit main's epilogue
 	pop	%rbx
-	movq	%rbp, %rsp
+	mov	%rbp, %rsp
 	pop	%rbp
 	ret

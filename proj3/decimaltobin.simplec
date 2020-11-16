@@ -1,6 +1,5 @@
-int res;
-
 convert(dec) : function(int) -> int {
+  int res;
   if (dec == 0) {
     res = 0;
   } else {
@@ -14,5 +13,5 @@ main {
   int bin;
   dec = 10;
   bin = convert(dec);
-  return 0;  
+  return 1;  
 }

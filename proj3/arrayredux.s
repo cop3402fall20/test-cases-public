@@ -1,36 +1,68 @@
-	.file "stdin"
-	.text
-	.globl f
-	.type f, @function
+.file "stdin"
+.text
+.globl f
+.type f, @function
 f:
+	# emit the function prologue
 	push	%rbp
-	movq	%rsp, %rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
 	push	%rbx
+	# move parameter onto the stack
+	mov	%rdi, -8(%rbp)
+	# generate code for the body
+	# generate code for the return expression
+	# push the integer
+	mov	$10, %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit the epilogue
 	pop	%rbx
-	movq	%rbp, %rsp
+	mov	%rbp, %rsp
 	pop	%rbp
 	ret
-	.text
-	.globl main
-	.type main, @function
+.text
+.globl main
+.type main, @function
 main:
+	# stack space for argc and argv
+	# emit main's prologue
 	push	%rbp
-	movq	%rsp, %rbp
-	subq	$128, %rsp
+	mov	%rsp, %rbp
+	sub	$40, %rsp
 	push	%rbx
-	# save any caller-saved registers
+	# move argc and argv from parameter registers to the stack
+	mov	%rdi, -32(%rbp)
+	mov	%rsi, -40(%rbp)
+	# generate code for the body
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$1, %rax
 	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# generate code for the right-hand side of the assignment
+	# evaluate the parameter
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	# pass the parameter
+	pop	%rdi
 	# call the function
 	call	f
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
+	# push the return value
+	push	%rax
 	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the return expression
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit main's epilogue
 	pop	%rbx
-	movq	%rbp, %rsp
+	mov	%rbp, %rsp
 	pop	%rbp
 	ret

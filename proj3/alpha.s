@@ -1,117 +1,198 @@
-	.file "stdin"
-	.text
-	.globl f
-	.type f, @function
+.file "stdin"
+.text
+.globl f
+.type f, @function
 f:
+	# emit the function prologue
 	push	%rbp
-	movq	%rsp, %rbp
+	mov	%rsp, %rbp
+	sub	$16, %rsp
 	push	%rbx
-	pop	%rbx
-	movq	%rbp, %rsp
-	pop	%rbp
-	ret
-	.text
-	.globl g
-	.type g, @function
-g:
-	push	%rbp
-	movq	%rsp, %rbp
-	push	%rbx
-	pop	%rbx
-	movq	%rbp, %rsp
-	pop	%rbp
-	ret
-	.text
-	.globl h
-	.type h, @function
-h:
-	push	%rbp
-	movq	%rsp, %rbp
-	push	%rbx
-	pop	%rbx
-	movq	%rbp, %rsp
-	pop	%rbp
-	ret
-	.text
-	.globl i
-	.type i, @function
-i:
-	push	%rbp
-	movq	%rsp, %rbp
-	push	%rbx
-	pop	%rbx
-	movq	%rbp, %rsp
-	pop	%rbp
-	ret
-	.text
-	.globl main
-	.type main, @function
-main:
-	push	%rbp
-	movq	%rsp, %rbp
-	subq	$128, %rsp
-	push	%rbx
-	# save any caller-saved registers
+	# move parameter onto the stack
+	mov	%rdi, -8(%rbp)
+	# generate code for the body
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$1, %rax
 	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the return expression
+	mov	-16(%rbp), %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit the epilogue
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl g
+.type g, @function
+g:
+	# emit the function prologue
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$16, %rsp
+	push	%rbx
+	# move parameter onto the stack
+	mov	%rdi, -8(%rbp)
+	# generate code for the body
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the return expression
+	mov	-16(%rbp), %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit the epilogue
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl h
+.type h, @function
+h:
+	# emit the function prologue
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$16, %rsp
+	push	%rbx
+	# move parameter onto the stack
+	mov	%rdi, -8(%rbp)
+	# generate code for the body
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$3, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the return expression
+	mov	-16(%rbp), %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit the epilogue
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl i
+.type i, @function
+i:
+	# emit the function prologue
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$16, %rsp
+	push	%rbx
+	# move parameter onto the stack
+	mov	%rdi, -8(%rbp)
+	# generate code for the body
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$4, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the return expression
+	mov	-16(%rbp), %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit the epilogue
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl main
+.type main, @function
+main:
+	# stack space for argc and argv
+	# emit main's prologue
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$64, %rsp
+	push	%rbx
+	# move argc and argv from parameter registers to the stack
+	mov	%rdi, -56(%rbp)
+	mov	%rsi, -64(%rbp)
+	# generate code for the body
+	# generate code for the right-hand side of the assignment
+	# evaluate the parameter
+	mov	-16(%rbp), %rax
+	push	%rax
+	# pass the parameter
+	pop	%rdi
 	# call the function
 	call	f
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
-	pop	%rax
-	# save any caller-saved registers
+	# push the return value
 	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# generate code for the right-hand side of the assignment
+	# evaluate the parameter
+	mov	-24(%rbp), %rax
+	push	%rax
+	# pass the parameter
+	pop	%rdi
 	# call the function
 	call	g
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
-	pop	%rax
-	# save any caller-saved registers
+	# push the return value
 	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# generate code for the right-hand side of the assignment
+	# evaluate the parameter
+	mov	-32(%rbp), %rax
+	push	%rax
+	# pass the parameter
+	pop	%rdi
 	# call the function
 	call	h
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
-	pop	%rax
-	# save any caller-saved registers
+	# push the return value
 	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# generate code for the right-hand side of the assignment
+	# evaluate the parameter
+	mov	-40(%rbp), %rax
+	push	%rax
+	# pass the parameter
+	pop	%rdi
 	# call the function
 	call	h
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
-	pop	%rax
-	# save any caller-saved registers
+	# push the return value
 	push	%rax
-	push	%rcx
-	push	%rdx
-	# pass parameters either in registers or in stack
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# generate code for the right-hand side of the assignment
+	# evaluate the parameter
+	mov	-48(%rbp), %rax
+	push	%rax
+	# pass the parameter
+	pop	%rdi
 	# call the function
 	call	i
-	# restore the stack afterwards
-	# restore any caller-saved registers
-	pop	%rdx
-	pop	%rcx
+	# push the return value
+	push	%rax
 	pop	%rax
+	mov	%rax, -8(%rbp)
+	# generate code for the return expression
+	# push the integer
+	mov	$0, %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit main's epilogue
 	pop	%rbx
-	movq	%rbp, %rsp
+	mov	%rbp, %rsp
 	pop	%rbp
 	ret
