@@ -75,7 +75,7 @@ main:
 	mov	%rax, -16(%rbp)
 	# generate code for the return expression
 	# push the integer
-	mov	$0, %rax
+	mov	$1, %rax
 	push	%rax
 	# save the return expression into %rax per the abi
 	pop	%rax
