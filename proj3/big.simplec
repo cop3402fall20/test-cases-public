@@ -17,31 +17,31 @@ main {
   int x;
   int var;
   int res;
-  array<10,int> arr;
+  int tmp;
   x = 1;
   var = a(1);
 
-  arr[x - 1] = 2 * var;
+  tmp = 2 * var;
   var = var - 1;
 
   res = b(1);
 
-  arr[x - 1] = 2 * var;
+  tmp = 2 * var;
   var = var + res;
 
   res = c(1);
 
-  arr[x - 1] = 2 * var;
+  tmp = 2 * var;
   var = ((res * res)/a(1));
 
   res = d(var) % a(1);
 
-  arr[x - 1] = 2 * var;
+  tmp = 2 * var;
   res = (((((var + g(x)*(var - g(x))*(var - 1)*(f(var) + b(var))*(var - 1)*(var + 1))))));
 
   res = e(1);
 
-  arr[x - 1] = 2 * var;
+  tmp = 2 * var;
   res = (((((var + g(x)*(var - g(x))*(var / 1)*(f(var) + b(var))*(var % 1)*(var + 1*(a(2))))))));
 
   var = f(29);
