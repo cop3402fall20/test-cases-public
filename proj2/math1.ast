@@ -63,12 +63,8 @@
 |  |  |  |  |  |  +-primitivetype
 |  |  |  |  |  |  |  +-typename_int
 |  |  |  |  |  +-op_times
-|  |  |  |  |  +-unaryexpr
-|  |  |  |  |  |  +-op_minus
-|  |  |  |  |  |  +-intexpr
-|  |  |  |  |  |  |  +-5
-|  |  |  |  |  |  |  +-primitivetype
-|  |  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  +-intexpr
+|  |  |  |  |  |  +-5
 |  |  |  |  |  |  +-primitivetype
 |  |  |  |  |  |  |  +-typename_int
 |  |  |  |  |  +-primitivetype
