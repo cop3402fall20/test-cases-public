@@ -55,9 +55,27 @@ main:
 	push	%rax
 	pop	%rax
 	mov	%rax, -16(%rbp)
-	# generate code for the return expression
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# generate code for the right operand
 	# push the integer
 	mov	$1, %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the subtraction
+	sub	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the return expression
+	# push the integer
+	mov	$0, %rax
 	push	%rax
 	# save the return expression into %rax per the abi
 	pop	%rax
