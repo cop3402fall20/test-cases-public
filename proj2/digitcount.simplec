@@ -3,7 +3,7 @@ int x;
 digitcount(x) : function(int) -> int {
   int returnVal;
   if (x < 0) {
-    returnVal = digitcount(-x);
+    returnVal = digitcount(x);
   }
   if (x >= 0 && x < 10) {
     returnVal = 1;
