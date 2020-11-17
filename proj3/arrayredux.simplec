@@ -8,12 +8,9 @@ main {
   x = 1;
   var = f(1);
 
-  while(x > 0){
-
-    arr[x - 1] = 2 * var;
-    var = var - 1;
-  }
-
+  arr[x - 1] = 2 * var;
+  var = var - 1;
+  
 
   return 1;
 
