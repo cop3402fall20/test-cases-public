@@ -88,6 +88,49 @@ main:
 	push	%rax
 	pop	%rax
 	mov	%rax, -8(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	# generate code for the right operand
+	# evaluate the parameter
+	mov	-16(%rbp), %rax
+	push	%rax
+	# pass the parameter
+	pop	%rdi
+	# call the function
+	call	g
+	# push the return value
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the multiplication
+	imul	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -24(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	mov	-8(%rbp), %rax
+	push	%rax
+	# generate code for the right operand
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the subtraction
+	sub	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
 	# generate code for the return expression
 	# push the integer
 	mov	$2, %rax
