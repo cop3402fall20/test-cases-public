@@ -17,11 +17,8 @@ main {
   a = 2;
   x = f(e);
 
-  if (x > 0) {
-
-    e = 2 * g(a);
-    x = x - 1;
-  }
+  e = 2 * g(a);
+  x = x - 1;
 
   return 2;
 
