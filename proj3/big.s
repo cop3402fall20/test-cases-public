@@ -195,6 +195,24 @@ main:
 	mov	%rax, -16(%rbp)
 	# generate code for the right-hand side of the assignment
 	# generate code for the left operand
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the multiplication
+	imul	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
 	mov	-16(%rbp), %rax
 	push	%rax
 	# generate code for the right operand
@@ -226,6 +244,24 @@ main:
 	mov	%rax, -24(%rbp)
 	# generate code for the right-hand side of the assignment
 	# generate code for the left operand
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the multiplication
+	imul	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
 	mov	-16(%rbp), %rax
 	push	%rax
 	# generate code for the right operand
@@ -254,6 +290,24 @@ main:
 	push	%rax
 	pop	%rax
 	mov	%rax, -24(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the multiplication
+	imul	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
 	# generate code for the right-hand side of the assignment
 	# generate code for the left operand
 	# generate code for the left operand
@@ -326,6 +380,24 @@ main:
 	push	%rax
 	pop	%rax
 	mov	%rax, -24(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the multiplication
+	imul	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
 	# generate code for the right-hand side of the assignment
 	# generate code for the left operand
 	# generate code for the left operand
@@ -507,6 +579,24 @@ main:
 	push	%rax
 	pop	%rax
 	mov	%rax, -24(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the multiplication
+	imul	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
 	# generate code for the right-hand side of the assignment
 	# generate code for the left operand
 	# generate code for the left operand
