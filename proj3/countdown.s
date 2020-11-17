@@ -6,7 +6,7 @@ countdown:
 	# emit the function prologue
 	push	%rbp
 	mov	%rsp, %rbp
-	sub	$24, %rsp
+	sub	$40, %rsp
 	push	%rbx
 	# move parameter onto the stack
 	mov	%rdi, -8(%rbp)
@@ -16,6 +16,112 @@ countdown:
 	push	%rax
 	pop	%rax
 	mov	%rax, -16(%rbp)
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$4, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -24(%rbp)
+	# generate code for the right-hand side of the assignment
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-32(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the subtraction
+	sub	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	mov	-24(%rbp), %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-32(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the addition
+	add	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -24(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	# generate code for the left operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-32(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the addition
+	add	%rbx, %rax
+	# push the expression result
+	push	%rax
+	# generate code for the right operand
+	# generate code for the left operand
+	mov	-24(%rbp), %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-32(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the addition
+	add	%rbx, %rax
+	# push the expression result
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the multiplication
+	imul	%rbx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# generate code for the right-hand side of the assignment
+	# generate code for the left operand
+	mov	-16(%rbp), %rax
+	push	%rax
+	# generate code for the right operand
+	mov	-32(%rbp), %rax
+	push	%rax
+	# pop the right operand
+	pop	%rbx
+	# pop the left operand
+	pop	%rax
+	# do the remainder
+	cdq
+	idiv	%rbx
+	mov	%rdx, %rax
+	# push the expression result
+	push	%rax
+	pop	%rax
+	mov	%rax, -40(%rbp)
 	# generate code for the return expression
 	# push the integer
 	mov	$0, %rax
