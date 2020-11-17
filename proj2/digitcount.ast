@@ -49,12 +49,8 @@
 |  |  |  |  |  |  |  |  +-callexpr
 |  |  |  |  |  |  |  |  |  +-digitcount
 |  |  |  |  |  |  |  |  |  +-exprlist
-|  |  |  |  |  |  |  |  |  |  +-unaryexpr
-|  |  |  |  |  |  |  |  |  |  |  +-op_minus
-|  |  |  |  |  |  |  |  |  |  |  +-identexpr
-|  |  |  |  |  |  |  |  |  |  |  |  +-x
-|  |  |  |  |  |  |  |  |  |  |  |  +-primitivetype
-|  |  |  |  |  |  |  |  |  |  |  |  |  +-typename_int
+|  |  |  |  |  |  |  |  |  |  +-identexpr
+|  |  |  |  |  |  |  |  |  |  |  +-x
 |  |  |  |  |  |  |  |  |  |  |  +-primitivetype
 |  |  |  |  |  |  |  |  |  |  |  |  +-typename_int
 |  |  |  |  |  |  |  |  |  |  +-exprlist(empty)
