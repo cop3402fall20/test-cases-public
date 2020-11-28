@@ -1,0 +1,30 @@
+factorial(x) : function(int) -> int {
+  int cond;
+  int res;
+  cond = 1;
+  
+  while (cond) {
+    if (x == 0) {
+      res = 1;
+    } else {
+      res = x * factorial(x - 1);
+    }
+    cond = 0;
+  }
+  return res;
+}
+
+main {
+  int x;
+  pointer<int> y;
+  x = 10;
+
+  while (x > 1) {
+    x = factorial(x);
+    x = (x - 1);
+  }
+
+  y = &x;
+
+  return *y;
+}

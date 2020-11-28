@@ -1,0 +1,58 @@
+main {
+  int cond;
+  int cond2;
+  int x;
+  pointer<int> foobar;
+
+  cond = 1;
+  cond2 = 1;
+  x = 2;
+
+  if (!(cond)) {
+    x = 3;
+  } else {
+  	cond = 0;
+  }
+
+  cond = 1;
+  while (cond) {
+  
+  	if (1 && 0 == 0) {
+  		foobar = &x;
+  		*foobar = 11;
+  		x = *foobar;
+
+  	} else {
+
+  		if (!(x == 3)) {
+  			foobar = &x - (pointer<int>)8;
+
+  			if ((1 || 1) == 1) {
+
+  				while (cond2) {
+  					foobar = &x;
+  					*foobar = 12;
+  					x = *foobar;
+  					cond2 = cond2 - 1;
+  				}
+
+  				if (x == 2) {
+  					x = *foobar;
+
+  				} else if (!(x == 2)) {
+  					x = x + 2;
+
+  				} else {
+  					cond = 0;
+  				}
+  			}
+
+  		} else {
+  			foobar = &x + (pointer<int>)8;
+  		}
+  	}
+  	cond = cond - 1;
+  }
+  
+  return *foobar;
+}

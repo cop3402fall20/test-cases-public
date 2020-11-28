@@ -1,0 +1,129 @@
+do(a) : function(int) -> int {
+  int y;
+  y = 1;
+  if (a > y) {
+    a = y;
+  }
+  return a;
+}
+
+re(a) : function(int) -> int {
+  int y;
+  y = 2;
+  if (a < y) {
+    y = a;
+  }
+  return y;
+}
+
+mi(a) : function(int) -> int {
+  int y;
+  int x;
+  int z;
+  y = 3;
+  x = 0;
+  z = 1;
+
+  if ((x && z) == 1) {
+    a = y;
+  } else {
+    y = a;
+  }
+  return a;
+}
+
+fa(a) : function(int) -> int {
+  int y;
+  int x;
+  int z;
+  y = 4;
+  x = 0;
+  z = 1;
+
+  if ((x || z) == 1) {
+    a = y;
+  } else if (y >= 4) {
+    a = y + a;
+  } else {
+    a = a + a;
+  }
+  return a;
+}
+
+so(a) : function(int) -> int {
+  int y;
+  y = 5;
+  if(!(y)) {
+    a = 0;
+  } else {
+    if (y <= 10) {
+      a = 1;
+    }
+  }
+  return a + y;
+}
+
+la(a) : function(int) -> int {
+  int y;
+  y = 6;
+  while (y < 10) {
+    y = y + 2;
+  }
+
+  return a + y;
+}
+
+ti(a) : function(int) -> int {
+  int y;
+  int z;
+  y = 7;
+  a = y;
+  z = 1;
+
+  while (y == a) {
+    if ((z || z) == 1) {
+      y = y + a;
+    }
+  }
+  return y;
+}
+
+
+main {
+  int var;
+  int res;
+  int counter;
+  pointer<int> pointy;
+  var = 5;
+  counter = 10;
+
+  while (counter >= 0) {
+    res = do(var);
+    res = re(var);
+
+    var = ((var + var) % 5);
+
+    res = mi(var);
+
+    res = fa(var);    
+
+    var = ((var * 1) + 5);
+
+    res = so(var);
+
+    res = la(var);
+
+    var = ((var + 1 + 2 + (3 - 1)));
+
+    res = ti(var);
+
+    pointy = &res;
+    *pointy = var;
+    res = *pointy;
+
+    counter = (counter / (2));
+  }
+
+  
+  return var;
+}
