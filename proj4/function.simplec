@@ -3,7 +3,7 @@ funct(a) : function(int) -> int {
   int cond;
   x = 3;
   cond = 1;
-  if ((1 && 0) == 0) {
+  if (1 && 0) {
     x = x + a;
   } else if (!(cond)) {
     x = 0;
@@ -27,7 +27,7 @@ main {
   x = x + *y;
   
   flag = 1;
-  while (!(flag)) {
+  while (flag) {
     if (flag) {
       flag = 0;
     } else {
