@@ -26,7 +26,6 @@ funct:
 	# generating code for an ifelsestmt
 	# generate code for the expression
 	# generate code for the left operand
-	# generate code for the left operand
 	# push the integer
 	mov	$1, %rax
 	push	%rax
@@ -48,16 +47,6 @@ funct:
 .L0:
 	mov	$0, %rax
 .L1:
-	# push the expression result
-	push	%rax
-	# generate code for the right operand
-	# push the integer
-	mov	$0, %rax
-	push	%rax
-	# pop the right operand
-	pop	%rbx
-	# pop the left operand
-	pop	%rax
 	# push the expression result
 	push	%rax
 	# emit a pop of the expression value from the stack into a register
@@ -244,6 +233,8 @@ main:
 	# emit the head label
 .L6:
 	# generate code for the expression
+	mov	-24(%rbp), %rax
+	push	%rax
 	# emit a pop of the expression value from the stack into a register
 	pop	%rax
 	# emit a cmp of register's value to 0, i.e., check whether it's false
